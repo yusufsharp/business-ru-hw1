@@ -331,3 +331,46 @@ input[name="about"]{
     display: flex;
     justify-content: space-between;
 }
+.footer{
+    margin-top: 160px;
+    padding-left: 200px;
+    padding-right: 200px;
+    border: 1px solid #cdbddb4e;
+}
+.support-block{
+    margin-top: 120px;
+}
+.support-email{
+    font-size: 40px;
+    color: #7953C3;
+    padding-bottom: 8px;
+}
+.support-gray{
+    color: #aaaaaa;
+    padding-bottom: 40px;
+}
+.support-menu{
+    display: flex;
+    justify-content: space-between;
+    line-height: 24px;
+    text-align: center;
+}
+.support-menu-list{
+    display: flex;
+    gap: 32px;
+    flex-direction: row;
+}
+.footer-line{
+    margin-top: 80px;
+    border: 1px solid #cdbddb4e;
+}
+.footer-warn{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 64px;
+}
+.end-line{
+    background-color: #7953C3;
+    height: 12px;
+}
