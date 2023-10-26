@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homeet</title>
-    <link rel="stylesheet" href="css/stanis.css">
-    
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="header">
         <picture class="picture">
             <img src="https://homeet.hse.ru/static/media/logo_main.b8cda893341cae4261fc65095645f799.svg" alt="Лох">
         </picture>
-        <button class="bttn">Выйти из аккаунта</button>
+        <button class="bttn" id="header-button">Выйти из аккаунта</button>
     </header>
     <main class>
         <div class='container-1'>
             <div class="reg-top">
-                <button class="bttn reg">Назад</button>
+                <button class="bttn reg"><a href="/src/index.html">Назад</a></button>
                 <div class="container-2">
                     <h3 style="margin-right: 16px; font-size: 32px; font-weight: 700;">Создание профиля</h3>
                     <div class="container-2-slash">
@@ -63,36 +62,42 @@
                     </div>
                     <div class="myform-grade">
                         <p style="font-size: 14px; color: #5D5B66; padding-bottom: 4px;">Ступень образования</p>
-                        <select>
-                            <option value="option1">Бакалавриат</option>
-                            <option value="option2">Специалитет</option>
-                            <option value="option3">Магистратура</option>
+                        <select id="inputGrade">
+                            <option value="">-</option>
+                            <option value="бакалавриат">Бакалавриат</option>
+                            <option value="специалитет">Специалитет</option>
+                            <option value="магистратура">Магистратура</option>
                           </select>
+                        <p class="inputNameError"></p>
                     </div>
                     <div class="myform-faculty">
                         <p style="font-size: 14px; color: #5D5B66; padding-bottom: 4px;">Факультет</p>
-                        <select>
-                            <option value="option1">МИЭМ</option>
-                            <option value="option2">ФКН</option>
-                            <option value="option3">ВШБ</option>
-                            <option value="option4">МИЭФ</option>
+                        <select id="inputFaculty">
+                            <option value="">-</option>
+                            <option value="МИЭМ">МИЭМ</option>
+                            <option value="ФКН">ФКН</option>
+                            <option value="ВШБ">ВШБ</option>
+                            <option value="МИЭФ">МИЭФ</option>
                           </select>
+                        <p class="inputNameError"></p>
                     </div>
                     <div class="myform-program">
                         <p style="font-size: 14px; color: #5D5B66; padding-bottom: 4px;">Образовательная программа</p>
-                        <select>
-                            <option value="option1">Информационная безопасность</option>
-                            <option value="option2">Инфокоммуникационные технологии и системы связи</option>
-                            <option value="option3">Информатика и вычислительная техника</option>
-                            <option value="option4">Прикладная математика</option>
-                            <option value="option5">Прикладная математика и информатика</option>
-                            <option value="option5">Прикладной анализ данных</option>
-                            <option value="option5">Программная инженерия</option>
+                        <select id="inputProgram">
+                            <option value="">-</option>
+                            <option value="ИБ">Информационная безопасность</option>
+                            <option value="ИТСС">Инфокоммуникационные технологии и системы связи</option>
+                            <option value="ИВТ">Информатика и вычислительная техника</option>
+                            <option value="ПМ">Прикладная математика</option>
+                            <option value="ПМИ">Прикладная математика и информатика</option>
+                            <option value="ПАД">Прикладной анализ данных</option>
+                            <option value="ПИ">Программная инженерия</option>
                           </select>
+                        <p class="inputNameError"></p>
                     </div>
                     
                     <div class="myform-work" >
-                        <input type="text" placeholder="Работа" class="input">
+                        <input type="text" placeholder="Работа" class="input work">
                     </div>
                     
                 </div></form>
@@ -116,7 +121,7 @@
                                             <div class="info-list-dot"></div>
                                             <p style="font-size: 9px;">21 год</p>
                                             <div class="info-list-dot"></div>
-                                            <p style="font-size: 9px;">1 курс бакалавриат ВШБ ИБ</p>
+                                            <p id="studyInfo" style="font-size: 9px;"><span>1</span> курc <span>бакалавриат</span> <span>ВШБ</span> <span>ИБ</span></p>
                                         </div>
                                         <div class="info-empty"><p style="font-size: 9px; text-align: center;">СТО в Бизнес в стиле .RU</p></div>
                                         <div class="info-more-container" style="padding-top: 10px;">
@@ -190,6 +195,6 @@
     <section>    
     </section>
     <aside></aside> 
-
+<script src="./js/script.js"></script>
 </body>
 </html>

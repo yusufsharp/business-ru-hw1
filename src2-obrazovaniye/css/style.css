@@ -88,7 +88,7 @@
 .reg-progress-bar{
     background-color: #d9d1e0; 
     height: 2px;
-    width: 408px;
+    width: 50%;
 }
 .reg-body{
     display: flex;
@@ -259,6 +259,7 @@ input[name="about"]{
     flex-direction: column;
     gap: 24px;
     width:100%;
+    flex: 1;
 }
 .preview{
     display: flex;
@@ -277,7 +278,6 @@ input[name="about"]{
     gap: 28px;
     
     padding: 20px;
-    height: 218px;
     border-radius: 32px;
     box-shadow: 0 0 10px rgba(133, 94, 152, 0.1);
     
@@ -293,7 +293,6 @@ input[name="about"]{
 }
 .preview-photo{
     height: 140px;
-    border: 1px dashed #cdbddb;
     border-radius: 16px;
     background-size: cover; /* Обрезать изображение так, чтобы оно заполнило контейнер */
     background-position: center;
@@ -338,6 +337,7 @@ input[name="about"]{
     height: 11px;
     display: flex;
     justify-content: space-between;
+    
 }
 .info-etc{
     height: 89px;
@@ -352,14 +352,14 @@ input[name="about"]{
 .info-etc-top-1{
     margin-top: 15px;
     height: 20px;
-    width:198px;
+    width:60%;
     background-color:#eeeef1;
     border-radius:6px;
 }
 .info-etc-top-2{
     margin-top: 2px;
     height: 14px;
-    width:308px;
+    width:75%;
     border-radius: 4px;
     background-color:#eeeef1;
 }
@@ -368,7 +368,7 @@ input[name="about"]{
 }
 .info-etc-line{
     height: 1px;
-    width:374px;
+    width:100%;
     background-color:#cccccc;
     opacity: 0.5;
     margin-bottom: 8px;
@@ -406,9 +406,10 @@ input[name="about"]{
 }
 .footer{
     margin-top: 160px;
-    padding-left: 200px;
-    padding-right: 200px;
-    border: 1px solid #cdbddb4e;
+    
+    padding-left: 20px;
+    padding-right: 20px;
+    border-top: 1px solid #cdbddb4e;
 }
 .support-block{
     margin-top: 120px;
@@ -447,4 +448,99 @@ input[name="about"]{
 .end-line{
     background-color: #7953C3;
     height: 12px;
+}
+
+@media (max-width: 768px) {
+    .reg-body{
+      flex-direction: column;
+      align-items: center;
+    }
+    .reg-body-container-left{
+        width: 100%;
+        
+    }
+    .container-1{
+        width: 90%;
+    }
+    .container-2{
+        text-align: center;
+        justify-content: space-between;
+    }
+    .myform-num{
+        display: flex;
+        flex-direction: column;
+    }
+    .myform-about{
+        display: flex;
+        flex-direction: column;
+    }
+    .preview-block{
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .preview-info{
+        width: 90%;
+    }
+    .info-etc{
+        width: 60%;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .dont-know-block{
+        width: auto;
+        height: auto;
+    }
+    .footer{
+        align-items: center;
+    }
+    .support-menu-list{
+        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: left;
+    }
+    .support-email{
+        font-size: 18px;
+        
+    }
+    .footer-warn{
+        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: left;
+        gap: 12px;
+    }
+    .continue-button{
+        justify-content: center;
+        margin-top: 50px;
+    }
+    .bttn.continue{
+        width: 120px;
+    }
+    .info-more-container{
+        width: 80%;
+        gap: 10px;
+        flex-direction: column;
+    }
+    select{
+        width: 100%;
+    }
+    .myform-select{
+        width: 95%;
+    }
+    .input{
+        width: 94%;
+    }
+}
+
+.inputNameError{
+    text-align: end;
+    color: #ff0000;
+}
+a{
+    text-decoration: none;
+    color:#7953C3;
+    font-size: 14px;
+}
+
+#studyInfo span{
+    font-size: 9px;
 }

@@ -4,25 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homeet</title>
-    <link rel="stylesheet" href="css/stanis.css">
-    
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header class="header">
+        <picture class="picture">
+            <img src="https://homeet.hse.ru/static/media/logo_main.b8cda893341cae4261fc65095645f799.svg" alt="Лох">
+        </picture>
+        <button class="bttn" id="header-button">Выйти из аккаунта</button>
+    </header>
     <main class>
-        <header class="header">
-            <picture class="picture">
-                <img src="https://homeet.hse.ru/static/media/logo_main.b8cda893341cae4261fc65095645f799.svg" alt="Лох">
-            </picture>
-            <button class="bttn">Выйти из аккаунта</button>
-        </header>
         <div class='container-1'>
             <div class="reg-top">
                 <button class="bttn reg">На главную</button>
                 <div class="container-2">
-                    <h3 style="margin-right: 16px; font-size: 32px;">Создание профиля</h3>
+                    <h3 style="margin-right: 16px; font-size: 32px; font-weight: 700;">Создание профиля</h3>
                     <div class="container-2-slash">
                         <p style="margin-right: 16px;">/</p>
-                        <p>О себе</p>
+                        <p style="font-weight: 700;">О себе</p>
                     </div>    
                 </div>
                 <div class="reg-bar"><div class="reg-progress-bar"></div></div>
@@ -32,26 +31,30 @@
                     <form><div class="myform">
                     <div class="myform-avatar">
                         <p style="color: #040013;">Аватар профиля</p>
-                        <button class="bttn form">Загрузить</button>
+                        <label class="input-file-label">
+                            <input type="file" id="inputFile" accept="image/*">
+                            <span>Загрузить</span>
+                        </label>
                         <p class="myform-avatar-gray">Загрузите фотографию весом не более 10мб</p>
+                    </div>
+                    <div class="outputImageBlock">
+                        <img id="outputImage" alt="">
                     </div>
                     <div class="myform-name">
                         <label for="myname" class="myform-name-gray">Имя и фамилия</label>
-                        <input name="myname" class="input" type="text" value="Саша Фефелов">
+                        <input name="myname" id="inputName" class="input error" type="text" value="Саша Фефелов">
+                        <p class="inputNameError"></p>
                         <div class="myform-radio"><div class="myform-radio-wrapper">
-                            <div class="radio-button">
-                                <input id="Boy" type="radio">
-                                <label class="radio-label">Парень</label>
-                            </div>
-                            <div class="radio-button">
-                                <input id="Girl" type="radio">
-                                <label class="radio-label">Девушка</label>
-                            </div>
-                        </div></div>
+                                <input id="Boy" type="radio" name="gender">
+                                <label for="Boy" class="radio-label">Парень</label>
+                                <input id="Girl" type="radio" name="gender">
+                                <label for="Girl" class="radio-label">Девушка</label>
+                        </div>
+                        </div>
                     </div>
                     <div class="myform-birth">
-                        <label for="birth" class="myform-name-gray"></label>
-                        <input name="birth" class="input" type="date" value="2024-09-24">
+                        <label for="inputDate" class="myform-name-gray"></label>
+                        <input id="inputDate" class="input" type="date" value="2024-09-24">
                     </div>
                     <div class="myform-tg"><input class="input" type="text" placeholder="Телеграм"></div>
                     <div>
@@ -72,17 +75,17 @@
                         <p class="preview-gray">Так будет выглядеть твоя будущая страница</p>
                         <div class="preview-block">
                             <div class="preview-block-left">
-                                <div class="preview-photo"></div>
+                                <div class="preview-photo"><img id="outputImagePreview"></div>
                                 <button class="bttn-preview">Показать контакты</button>
                             </div>
                             <div class="preview-block-right">
                                 <div class="preview-info">
                                     <div class="info-list">
-                                        <p>Саша Фефелов</p>
+                                        <p style="font-weight: 700;" id="outputName">Саша Фефелов</p>
                                         <div class="info-list-container">
-                                            <p style="font-size: 9px;">Парень</p>
+                                            <p style="font-size: 9px;" id="outputGender">Парень</p>
                                             <div class="info-list-dot"></div>
-                                            <p style="font-size: 9px;">21 год</p>
+                                            <p style="font-size: 9px;" id="outputDate">21 год</p>
                                             <div class="info-list-dot"></div>
                                             <div class="info-list-empty"></div>
                                         </div>
@@ -118,43 +121,45 @@
                         <p style="font-size: 14px; color:#5D5B66;">Расскажи о себе.</p>
                         <p style="font-size: 14px; color:#5D5B66;">Люди пишут тем, кому доверяют. Тем более при поиске соседа</p>
                         </div>
-                        <img src="img/smile.png" alt="boo" width="40px" height="38px" style="margin-top: 14px;">
+                        <img src="img/smile.png" alt="boo" width="40px" height="38px" style="margin-top: 10px;">
+                    </div>
+                    <div class="continue-button">
+                        <button class="bttn continue"><a href="" class="continue-url">Продолжить</a></button>
                     </div>
                 </div>
             </div>
         </div>
-        <footer class="footer">
-            <div class="support-block">
-                <p class="support-email">Support@homeet.com</p>
-                <p class="support-gray">Техническая поддержка</p>
-                <div class="support-menu">
-                    <div class="support-menu-list">
-                        <p>О сервисе</p>
-                        <p>Контакты</p>
-                        <p>Политика конфиденциальности</p>
-                    </div>
-                    <div class="support-menu-icons">
-                        <img src="img/telegram.png" alt="boo" style="padding-right: 8px;" height="24px" width="24px">
-                        <img src="img/vk.png" alt="boo" height="24px" width="24px">
-                    </div>
-                
-                </div>
-            </div>
-            <div class="footer-line"></div>
-            <div class="footer-warn">
-                <div>
-                    <p style="font-size: 14px; color:#aaaaaa; padding-bottom: 4px;">Предложение не является публичной офертой.</p>
-                    <p style="font-size: 14px; color:#aaaaaa;">Сервис не несет ответственности за действия пользователей, достоверность информации и т.д.</p>
-                </div>
-                <p style="font-size: 14px; color:#000; align-self: flex-end;">Сделано в бвср</p>    
-            </div>
-        </footer>
-        <div class="end-line"></div>
     </main>
-    <section>
-        
+    <footer class="footer">
+        <div class="support-block">
+            <p class="support-email">Support@homeet.com</p>
+            <p class="support-gray">Техническая поддержка</p>
+            <div class="support-menu">
+                <div class="support-menu-list">
+                    <p>О сервисе</p>
+                    <p>Контакты</p>
+                    <p>Политика конфиденциальности</p>
+                </div>
+                <div class="support-menu-icons">
+                    <img src="img/telegram.png" alt="boo" height="24px" width="24px">
+                    <img src="img/vk.png" alt="boo" height="24px" width="24px">
+                </div>
+            
+            </div>
+        </div>
+        <div class="footer-line"></div>
+        <div class="footer-warn">
+            <div>
+                <p style="font-size: 14px; color:#aaaaaa; padding-bottom: 4px;">Предложение не является публичной офертой.</p>
+                <p style="font-size: 14px; color:#aaaaaa;">Сервис не несет ответственности за действия пользователей, достоверность информации и т.д.</p>
+            </div>
+            <p style="font-size: 14px; color:#000; align-self: flex-end;">Сделано в бвср</p>    
+        </div>
+    </footer>
+    <div class="end-line"></div>
+    <section>        
     </section>
     <aside></aside> 
-
+    <script src="./js/script.js"></script>
 </body>
 </html>

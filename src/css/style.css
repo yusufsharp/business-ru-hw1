@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    font-family: 'Museo Sans Cyrl 500';
+    font-family: 'Museo Sans Cyrl';
     font-size: 16px;
 }
 
@@ -14,6 +14,7 @@
     padding-left: 40px;
     box-shadow: 0px 5px 10px rgba(133, 94, 152, 0.1);
     margin-bottom: 40px;
+    
 }
 .bttn {
     width: 173px;
@@ -37,7 +38,6 @@
     width: 144px;
     height: 36px;
     font-size: 14px;
-
 }
 .bttn-preview{
     width: 100%;
@@ -50,6 +50,19 @@
     background-color: #7953C3;
     opacity: 0.2;
     color: #fff;
+}
+.continue-button{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    margin-top: 360px;
+}
+.bttn.continue{
+    width:226px;
+    height:48px;
+    background-color:#7953c3;
+    color:white;
+    opacity: 0.2;
 }
 .container-1 {
     max-width: 1040px;
@@ -83,10 +96,85 @@
     gap: 60px;
     width: 100%;
     padding-top: 40px;
+
 }
 .reg-body-container-left{
     width: 366px;
-
+    flex: 1;
+}
+.reg-body-container-right{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width:100%;
+    flex: 1;
+}
+@media (max-width: 768px) {
+    .reg-body{
+      flex-direction: column;
+      align-items: center;
+    }
+    .reg-body-container-left{
+        width: 100%;
+        
+    }
+    .container-1{
+        width: 90%;
+    }
+    .container-2{
+        text-align: center;
+        justify-content: space-between;
+    }
+    .myform-num{
+        display: flex;
+        flex-direction: column;
+    }
+    .myform-about{
+        display: flex;
+        flex-direction: column;
+    }
+    .preview-block{
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .preview-info{
+        align-items: center;
+        width: 90%;
+    }
+    .info-etc{
+        width: 80%;
+        align-items: center;
+    }
+    .dont-know-block{
+        width: auto;
+        height: auto;
+    }
+    .footer{
+        align-items: center;
+    }
+    .support-menu-list{
+        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: left;
+    }
+    .support-email{
+        font-size: 18px;
+        
+    }
+    .footer-warn{
+        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: left;
+        gap: 12px;
+    }
+    .continue-button{
+        justify-content: center;
+        margin-top: 50px;
+    }
+    .bttn.continue{
+        width: 120px;
+    }
+    
 }
 .myform{
     display: flex;
@@ -121,7 +209,11 @@
     top: 10px;
     left: 10px;
 }
-
+.inputNameError{
+    text-align: end;
+    font-size: 14px;
+    color: #ff0000;
+}
 .input{
     color:#040013; 
     border-radius: 8px; 
@@ -188,12 +280,7 @@ input[name="about"]{
     height: 96px;
     
 }
-.reg-body-container-right{
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    width:100%;
-}
+
 .preview{
     display: flex;
     flex-direction: column;
@@ -211,7 +298,7 @@ input[name="about"]{
     gap: 28px;
     
     padding: 20px;
-    height: 218px;
+    
     border-radius: 32px;
     box-shadow: 0 0 10px rgba(133, 94, 152, 0.1);
     
@@ -229,7 +316,7 @@ input[name="about"]{
     height: 140px;
     border: 1px dashed #cdbddb;
     border-radius: 16px;
-
+    overflow: hidden;
 }
 .preview-info{
     display: flex;
@@ -279,14 +366,14 @@ input[name="about"]{
 .info-etc-top-1{
     margin-top: 15px;
     height: 20px;
-    width:198px;
+    width:60%;
     background-color:#eeeef1;
     border-radius:6px;
 }
 .info-etc-top-2{
     margin-top: 2px;
     height: 14px;
-    width:308px;
+    width:75%;
     border-radius: 4px;
     background-color:#eeeef1;
 }
@@ -295,7 +382,7 @@ input[name="about"]{
 }
 .info-etc-line{
     height: 1px;
-    width:374px;
+    width:100%;
     background-color:#cccccc;
     opacity: 0.5;
     margin-bottom: 8px;
@@ -309,7 +396,7 @@ input[name="about"]{
 }
 .info-etc-container-1{
     height: 16px;
-    width:158px;
+    flex: 1;
     border-radius: 4px;
     background-color:#eeeef1;
     
@@ -317,14 +404,12 @@ input[name="about"]{
 
 .info-etc-container-2{
     height: 16px;
-    width:202px;
+    flex: 1.5;
     border-radius: 4px;
     background-color:#eeeef1;
 }
 
 .dont-know-block{
-    width: 614px;
-    height: 68px;
     box-shadow: 0 0 10px rgba(133, 94, 152, 0.1);
     border-radius: 16px;
     padding: 12px;
@@ -335,13 +420,14 @@ input[name="about"]{
     margin-top: 160px;
     padding-left: 200px;
     padding-right: 200px;
-    border: 1px solid #cdbddb4e;
+    border-top: 1px solid #cdbddb4e;
 }
 .support-block{
     margin-top: 120px;
 }
 .support-email{
     font-size: 40px;
+    font-weight: 700;
     color: #7953C3;
     padding-bottom: 8px;
 }
@@ -373,4 +459,52 @@ input[name="about"]{
 .end-line{
     background-color: #7953C3;
     height: 12px;
+}
+
+.input-file-label {
+	position: relative;
+	display: inline-block;
+}
+.input-file-label span {
+	position: relative;
+	display: inline-block;
+	font-size: 14px;
+	color: rgb(255 255 255);
+	text-align: center;
+	border-radius: 8px;
+	background-color: #7953c3;
+	width: 144px;
+	height: 36px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	border: none;
+	margin: 0;	
+}
+.input-file-label input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+
+.outputImageBlock{
+    display: none;
+    max-height: 150px;
+    max-width: 150px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+#outputImage{
+    width: 100%; 
+    height: auto;
+}
+#outputImagePreview{
+    width: 100%;
+    height: auto;
+}
+.continue-url{
+    text-decoration: none;
+    color: white;
 }
